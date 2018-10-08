@@ -26,8 +26,11 @@ std::string Student::getFirstAndMiddleNames() const {
 }
 
 std::string Student::getFullName() const { 
-  std:: string full = this->firstAndMiddleNames+this->lastName; 
-  return full;
+  std::ostringstream oss;
+  oss << this->firstAndMiddleNames << " " <<this->lastName;
+  return oss.str();
+  // std:: string full = this->firstAndMiddleNames+this->lastName; 
+  // return full;
 }
 
 std::string Student::toString() const { 
